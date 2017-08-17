@@ -25,7 +25,7 @@ cd pecl-memcache-issue-23/
 docker-compose up
 ```
 
-Now, the two containers should be running, you can open the following in your
+Now, the two containers should be running, and you can open the following in your
 browser to verify:
 
 * <http://localhost:8001/info.php> (should be running PHP 7.0)
@@ -35,6 +35,9 @@ To test the `session_start()` issue and see the warning, open the following:
 
 * PHP 7.0: <http://localhost:8001/> (the session should work as expected)
 * PHP 7.1: <http://localhost:8002/> (`session_start()` should generate a warning)
+
+See the scripts in [`docker/`](docker) for an understanding of how everything
+is configured and running.
 
 
 [pecl-memcache-23]: https://github.com/websupport-sk/pecl-memcache/issues/23
